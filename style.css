@@ -1,0 +1,354 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #451e72, #451e72);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Titre section */
+h2 {
+    color: #451e72;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Compétences */
+.skill {
+    background: #fff;
+    padding: 15px 20px;
+    border-left: 5px solid #451e72;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill img {
+    width: 32px;
+    height: 32px;
+}
+
+.skill span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+/* Projets */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.project {
+    background: #ffffff;
+    padding: 20px;
+    flex: 1 1 45%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+.project:hover {
+    transform: translateY(-5px);
+    background-color: #f0f8ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #451e72;
+    color: white;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.cv-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #451e72;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.cv-button:hover {
+    background-color: #451e72;
+    transform: scale(1.05);
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.github-link img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* pour que l'icône soit blanche sur fond foncé */
+    transition: transform 0.2s ease;
+}
+
+.github-link:hover img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.project.maintenance {
+    position: relative;
+    opacity: 0.85;
+}
+
+.badge-maintenance {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    animation: blink 1.5s infinite;
+}
+
+/* Petite animation clignotante */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Style de la barre de navigation */
+nav {
+    position: sticky; /* Reste en haut de la page pendant le défilement */
+    top: 0; /* Toujours en haut */
+    background-color: #451e72; /* Couleur de fond */
+    padding: 10px 0;
+    z-index: 10; /* S'assurer que la barre soit toujours au-dessus des autres éléments */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #451e72; /* Changer la couleur du fond au survol */
+    border-radius: 5px;
+}
+
+/* Section Stages */
+#internships {
+    background: #f0f8ff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.internship {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.internship h3 {
+    color: #451e72;
+}
+
+.internship p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.badge-in-progress {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ff9900;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    animation: blink 1.5s infinite;
+}
+
+/* Animation de clignotement pour le badge "En cours" */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Section Le BTS SIO */
+#bts-sio {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.bts-option {
+    margin-bottom: 30px;
+}
+
+.bts-option h3 {
+    color: #451e72;
+    font-size: 1.5em;
+}
+
+.bts-option p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+#bts-sio h2 {
+    color: #451e72;
+    margin-bottom: 20px;
+}
+
+/* Section Contact */
+#contact {
+    background: #f5f7fa;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+#contact h2 {
+    color: #451e72;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #451e72;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 12px 25px;
+    background-color: #451e72;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #451e72;
+}
+
+/* Pour le formulaire de contact, s'assurer qu'il est agréable */
+form input, form textarea {
+    width: 100%;
+}
+
+/* Section Veille Technologique */
+#tech-watch {
+    background: #f5f7fa;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+#tech-watch h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.tech-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
