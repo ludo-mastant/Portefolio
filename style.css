@@ -61,6 +61,46 @@ h2 {
     transform: scale(1.05);
 }
 
+
+/* Stages */
+#internships {
+  padding: 50px 20px;
+  background-color: #f2f2f2;
+}
+
+#internships h1 {
+  font-size: 28px;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+#internships h2 {
+  font-size: 22px;
+  color: #333;
+  margin-top: 30px;
+}
+
+#internships p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#internships ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+#internships ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+
 /* Projets */
 .projects {
     display: flex;
