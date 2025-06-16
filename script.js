@@ -17,3 +17,13 @@ sections.forEach(section => {
     section.style.transform = "translateY(50px)";
     section.style.transition = "all 0.6s ease-out";
 });
+
+// 
+function toggleinternships() {
+    const internshipsSection = document.getElementById('internships');
+    if (internshipsSection.style.display === 'none') {
+      internshipsSection.style.display = 'block';
+    } else {
+      internshipsSection.style.display = 'none';
+    }
+  }
